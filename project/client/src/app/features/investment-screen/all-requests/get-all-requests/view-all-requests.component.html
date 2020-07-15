@@ -1,0 +1,9 @@
+<div class = "view-all-requests-container">
+    
+    <button (click)="this.goToInvestments()">Investments</button>
+    <app-view-request *ngFor="let request of allForeignRequests" [request]="request"
+    (proposalCreate)="createProposal($event)"
+    ></app-view-request>
+    
+    
+</div>

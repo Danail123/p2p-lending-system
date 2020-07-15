@@ -1,0 +1,58 @@
+.home-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fill-space {
+  height: 100px;
+  flex: 1 1 auto;
+}
+
+.header {
+  text-align: center;
+  font-size: 70px;
+  color: #E5FCC2;
+}
+
+.header3 {
+  text-align: center;
+  font-size: 50px;
+  color: #E5FCC2;
+}
+
+.home-components {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.intro-text {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  height: 90%;
+}
+
+.intro-text>.mat-card {
+  font-size: 25px;
+  width: 100%;
+  text-align: justify;
+  padding: 5px;
+  background-color: #594F4F;
+  color: #45ADA8;
+}
+
+.white {
+  color: #E5FCC2;
+  text-decoration-line: none;
+}
+
+.mat-card {
+  background: none;
+  color: none;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}

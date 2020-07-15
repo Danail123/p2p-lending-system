@@ -1,0 +1,8 @@
+<div *ngIf="requestProposals">
+    <div *ngFor="let proposal of requestProposals">
+
+        <app-view-proposals  [proposal]="proposal" [request]="request">
+            
+        </app-view-proposals>
+    </div>
+</div>

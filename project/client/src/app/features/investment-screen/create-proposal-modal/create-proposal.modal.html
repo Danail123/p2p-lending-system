@@ -1,0 +1,61 @@
+
+
+<div class="create-proposal-container">
+  <form [formGroup]="this.createLoanProposalForm" 
+    class="create-todo-form">
+    <mat-form-field>
+      <input matInput placeholder="Amount" required formControlName="amount">
+    </mat-form-field>
+
+    <mat-error *ngIf="this.createLoanProposalForm.controls.amount.errors?.required">
+      The proposal Amount is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.amount.errors?.min">
+      The proposal Amount can not be different than the requested!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.amount.errors?.max">
+      The proposal Amount can not be different than the requested!
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput placeholder="Period" required formControlName="period">
+    </mat-form-field>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.period.errors?.required">
+      The proposal Period is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.period.errors?.min">
+      The proposal Period can not be lower than 1!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.period.errors?.max">
+      The proposal Period can not be more than 5 years!
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput placeholder="Penalty Rate %" required formControlName="penaltyRate">
+    </mat-form-field>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.penaltyRate.errors?.required">
+      The proposal Penalty Rate is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.penaltyRate.errors?.min">
+      The proposal Penalty Rate can not be lower than 1!
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput placeholder="Interest Rate %" required formControlName="interestRate">
+    </mat-form-field>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.interestRate.errors?.required">
+      The proposal Interest Rate is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanProposalForm.controls.interestRate.errors?.min">
+      The proposal Interest Rate can not be lower than 1!
+    </mat-error>
+
+    
+
+    <button mat-icon-button [color]="'primary'" class="create-proposal-button" 
+      [disabled]="this.createLoanProposalForm.invalid" mat-dialog-close (click)="this.createProposal(this.createLoanProposalForm.value)">
+      <i class="material-icons">note_add</i>
+    </button>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+  </form>
+</div>

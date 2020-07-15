@@ -1,0 +1,9 @@
+.logged-in-nav {
+    display: flex
+}
+
+.username {
+    display: flex;
+
+    justify-content: flex-end;
+}

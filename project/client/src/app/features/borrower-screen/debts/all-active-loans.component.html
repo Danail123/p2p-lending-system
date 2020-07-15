@@ -1,0 +1,9 @@
+<p>{{debts.amount}}</p>
+<div *ngFor="let debt of debts">
+    <ul>
+        <li>{{debt.amount}}</li>
+        <li>{{debt.period}}</li>
+        <li>{{debt.interestRate}}</li>
+        <li>{{debt.penaltyRate}}</li>
+    </ul>
+</div>

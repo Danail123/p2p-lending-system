@@ -1,0 +1,56 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ban-text {
+  color: black;
+}
+
+.ban-decoration {
+  text-decoration: line-through;
+}
+
+.user-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-header {
+  text-align: center;
+  display: block;
+}
+
+.mat-card-subtitle {
+  text-align: center;
+  margin: 0;
+}
+
+.img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin: 3px;
+}
+
+.mat-card-image {
+  margin: 0;
+}
+
+.mat-card-image:first-child {
+  margin-top: 0px;
+  border-radius: 50px;
+}
+
+.button {
+  margin-left: 10px;
+  background-color: #E5FCC2;
+  color: black;
+}

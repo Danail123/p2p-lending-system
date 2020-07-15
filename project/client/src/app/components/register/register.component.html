@@ -1,0 +1,43 @@
+<mat-tab-group class="register-form" mat-align-tabs="center" headerPosition="below">
+
+    <mat-tab label="Register">
+        <div class="form-container">
+            <h3>Register</h3>
+            <form [formGroup]="registerForm">
+
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input formControlName="username" matInput type="text" placeholder="Enter username here">
+                    <mat-error *ngIf="!!registerForm.controls.username?.errors?.minlength">
+                        Username should be between 3 and 16 characters.
+                    </mat-error>
+                </mat-form-field>
+
+                <br /><br />
+
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput type="password" placeholder="******">
+                    <mat-error *ngIf="!!registerForm.controls.password?.errors?.minlength">
+                        Password should be between 5 and 16 characters.
+                    </mat-error>
+                </mat-form-field>
+
+                <br /><br />
+
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput type="text" placeholder="email@address.com">
+                    <mat-error *ngIf="!!registerForm.controls.email?.errors?.email">
+                        Please enter a valid email.
+                    </mat-error>
+                </mat-form-field>
+
+                <br /><br />
+                <button mat-raised-button color="primary" (click)="register()"
+                    [disabled]="!registerForm.valid">Register</button>
+            </form>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>

@@ -1,0 +1,48 @@
+<div class="home-components-logged-in" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">P2P Lending</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+
+          <div class="logged-in-nav" *ngIf="loggedIn">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" routerLink="/loans" routerLinkActive="active">Loans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/investments">Investments</a>
+            </li>
+            <li >
+              <a class="nav-link" >Deposit</a>
+            </li>
+            <li >
+              <a class="nav-link" >Withdrow</a>
+            <li >
+              <a class="nav-link" (click)="this.logout()">logout</a>
+            </li>
+            <li *ngIf="loggedUsserInfo" class="username">
+              {{loggedUsserInfo.username}}
+            </li>
+          </ul>
+        </div>
+            
+        <div *ngIf="!loggedIn">
+          <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+            <li >
+              <a class="nav-link" routerLink="/register"> sing up</a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/login">log in</a>
+            </li>
+            
+          </ul>
+        </div>
+        </div>
+      </nav>
+</div>

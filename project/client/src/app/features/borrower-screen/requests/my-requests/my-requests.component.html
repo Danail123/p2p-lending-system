@@ -1,0 +1,11 @@
+<div class="view-my-requests-container" >
+  <button (click)="openDialog()">Create request</button>
+  <button>
+    <a (click)="this.goToDebts()">My Debts</a>
+  </button>
+
+  <app-view-my-request
+    *ngFor="let request of allUserRequests"
+    [request]="request"
+  ></app-view-my-request>
+</div>

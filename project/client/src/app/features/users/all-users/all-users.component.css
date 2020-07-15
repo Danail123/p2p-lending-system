@@ -1,0 +1,13 @@
+.all-users-container {
+  height: 100%;
+}
+
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.user-view {
+  margin: 5px 5px 5px 5px;
+}

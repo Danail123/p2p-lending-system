@@ -1,0 +1,10 @@
+<div class="view-request-container">
+    <ul *ngIf="this.request !== null">
+        <li>{{this.request.amount}}</li>
+        <li>{{this.request.period}}</li>
+        <li *ngIf="requestProposals">
+            <button (click)="this.openDialogForRequestProposals()">Proposals</button>
+        </li>
+    </ul>
+
+</div>

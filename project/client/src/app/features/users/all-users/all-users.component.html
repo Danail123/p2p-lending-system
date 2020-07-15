@@ -1,0 +1,9 @@
+<div class="all-users-container">
+
+    <div class="users-list">
+        <app-user-view *ngFor="let user of this.users" [user]="user" class="user-view" (banUser)="banUser($event)"
+            (unBanUser)="unBanUser($event)" (deleteUser)="deleteUser($event)">
+        </app-user-view>
+    </div>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="user-view-container">
+    <mat-card class="user-card">
+
+        <div class="user-info">
+            <span *ngIf="banStatus" class="ban-text">BANNED!!!</span>
+            <img mat-card-image src="{{ userAvatarUrl }}" class="img">
+            <mat-card-header [class.ban-decoration]="banStatus">{{ user.username }}</mat-card-header>
+            <mat-card-subtitle>{{ user.role }}</mat-card-subtitle>
+        </div>
+
+        <div class="user-buttons">
+            <button mat-button *ngIf="!banStatus" (click)="onClickBanUser()" class="button">Ban</button>
+            <button mat-button *ngIf="banStatus" (click)="onClickUnBanUser()" class="button">UnBan</button>
+            <button mat-button (click)="onClickDeleteUser()" class="button">Delete</button>
+        </div>
+
+    </mat-card>
+</div>

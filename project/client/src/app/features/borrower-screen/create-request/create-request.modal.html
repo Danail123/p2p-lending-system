@@ -1,0 +1,43 @@
+<div class="create-request-container">
+  <form [formGroup]="this.createLoanRequestForm" class="create-todo-form">
+    <mat-form-field>
+      <input matInput placeholder="Amount" required formControlName="amount" />
+    </mat-form-field>
+
+    <mat-error
+      *ngIf="this.createLoanRequestForm.controls.amount.errors?.required"
+    >
+      The proposal Amount is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanRequestForm.controls.amount.errors?.min">
+      The proposal Amount can not be lower than 100!
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput placeholder="Period" required formControlName="period" />
+    </mat-form-field>
+    <mat-error
+      *ngIf="this.createLoanRequestForm.controls.period.errors?.required"
+    >
+      The proposal Period is required!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanRequestForm.controls.period.errors?.min">
+      The proposal Period can not be lower than 1!
+    </mat-error>
+    <mat-error *ngIf="this.createLoanRequestForm.controls.period.errors?.max">
+      The proposal Period can not be more than5 years!
+    </mat-error>
+
+    <button
+      mat-icon-button
+      [color]="'primary'"
+      class="create-request-button"
+      [disabled]="this.createLoanRequestForm.invalid"
+      mat-dialog-close
+      (click)="this.createRequest(this.createLoanRequestForm.value)"
+    >
+      <i class="material-icons">note_add</i>
+    </button>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+  </form>
+</div>
