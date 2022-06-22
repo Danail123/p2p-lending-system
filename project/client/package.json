@@ -29,7 +29,7 @@
     "firebase": "^7.15.1",
     "hammerjs": "^2.0.8",
     "materialize-css": "^1.0.0-rc.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-auth-firebaseui": "^3.4.2",
     "ngx-spinner": "^8.0.3",
     "ngx-toastr": "^11.2.1",
